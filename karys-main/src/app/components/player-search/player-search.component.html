@@ -1,0 +1,33 @@
+<!-- <app-navbar></app-navbar> -->
+
+<div class="container mt-4">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="mb-3">
+        <label for="playerName" class="form-label">Player Name:</label>
+        <input type="text" class="form-control" id="playerName" [(ngModel)]="playerName" placeholder="Enter player name">
+      </div>
+      <button class="btn btn-primary w-10" style="background-color: rgb(245, 162, 81);" (click)="getPlayerInfo()">Search</button>
+      
+      
+    <div *ngIf="playerExists ?? false" class="mt-3">
+        <h4>Player exists on EUW Server</h4>
+            <div *ngIf="player">
+            <h4>Player Information:</h4>
+            <p>ID: {{ player.id }}</p>
+            <p>Level: {{ player.summonerLevel }}</p>
+            </div>
+    
+    <h4>Recent Matches:</h4>
+    <ul>
+      <li *ngFor="let matchId of matches">{{ matchId }}</li>
+    </ul>
+  </div>
+  
+<div *ngIf="playerExists === false" class="mt-3">
+    <p>Player does not exist on EUW server or there was an error.</p>
+  </div>
+      </div>
+    </div>
+  </div>
+

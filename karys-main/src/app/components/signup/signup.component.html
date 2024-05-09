@@ -1,0 +1,49 @@
+
+<main>
+    <div class="form-container">
+        <form [formGroup]="form">
+            <div class="nomcont">
+                <mat-form-field class="pren">
+                    <mat-label>Prénom</mat-label>
+                    <input matInput placeholder="Prénom" type="text" formControlName="prenom">
+                </mat-form-field >
+    
+                <mat-form-field class="pren">
+                    <mat-label>Nom</mat-label>
+                    <input matInput placeholder="Nom" type="text" formControlName="nom">
+                </mat-form-field>
+            </div>
+            
+            <mat-form-field class="pren">
+                <mat-label>Username</mat-label>
+                <input matInput placeholder="Username" type="text" formControlName="username">
+            </mat-form-field>
+    
+            <mat-form-field>
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Entrer Votre Email" type="email" formControlName="email">
+            </mat-form-field>
+    
+            <mat-form-field>
+                <mat-label>Mot de passe</mat-label>
+                <input type="password" matInput placeholder="Mot de passe" formControlName="password">
+            </mat-form-field>
+    
+            <mat-form-field>
+                <mat-label>Confirmer Mot de passe</mat-label>
+                <input type="password" matInput placeholder="Confirmer Mot de passe" formControlName="confirmPassword">
+            </mat-form-field>
+    
+    
+            <mat-checkbox (change)="checkboxselector($event)" >J'accepte les conditions d'utilisation du site.</mat-checkbox>
+    
+            <button mat-raised-button matTooltip="Sign up" color="primary" (click)="createAccount()">
+                Créer Compte       
+            </button>
+        </form>
+    </div>
+    
+   
+
+
+</main>

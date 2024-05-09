@@ -1,0 +1,46 @@
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 600px;
+}
+
+.nomcont{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nomcont .pren{
+    width: 48%;
+}
+form button:not(.specificbtn), form mat-form-field{
+    width: -webkit-fill-available;
+}
+
+
+form button{
+    margin-top: 5px;
+}
+
+main{
+    background: url('../../../assets/signup.jpg') no-repeat center center fixed;
+    background-size: 100% 100%;
+}
+
+.form-container{
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}

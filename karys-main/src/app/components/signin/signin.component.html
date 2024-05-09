@@ -1,0 +1,55 @@
+  
+<main>
+  <div class="form-container">
+    <form [formGroup]="form">
+      <mat-form-field >
+        <mat-label>Email</mat-label>
+        <input type="email" matInput placeholder="Ex. pat@example.com" formControlName="email">
+          <mat-error *ngIf = "form.get('email')!.hasError('required')">Email is required</mat-error>
+          <mat-error *ngIf = "form.get('email')!.hasError('email')">Email is invalid</mat-error>
+      </mat-form-field>
+
+
+      <mat-form-field >
+          <mat-label>Mot de passe</mat-label>
+          <input type="password" matInput placeholder="Mot de passe" formControlName="password">
+          <mat-error *ngIf = "form.get('password')!.hasError('required')">Password is required</mat-error>
+
+      </mat-form-field>
+
+        <button mat-button  [disabled]="!form.get('email')!.valid" 
+          (click)="recoverPassword()"  *ngIf="!isRecoveringPassword"
+          test-id="recover-password-button" >
+          Mot de passe oublié
+          </button>
+          <button mat-button  *ngIf="isRecoveringPassword"
+          test-id="recover-password-loader" >
+          <mat-spinner color="primary" class="button-loader" diameter="20"></mat-spinner>
+          </button>
+          
+        <button mat-raised-button matTooltip="Sign In" color="primary" [disabled]="!form.valid" (click)="login()" test-id="login-button"
+          *ngIf="!isLoggingIn">
+          Sign In
+      </button>
+        <button mat-raised-button  color="primary" *ngIf="isLoggingIn" test-id="login-loader"><mat-spinner color="accent" diameter="20"></mat-spinner></button>
+        <!-- <button mat-stroked-button matTooltip="Sign Up" color="primary">Sign Up</button> -->
+        
+    </form>
+    <div class="otherprov">
+     
+      <button mat-button color="primary" (click)="signInWithGoogle()">
+        <mat-icon>Google</mat-icon>
+        
+      </button>
+      <button mat-button color="primary" (click)="signInWithFaceBook()">
+        <mat-icon>facebook</mat-icon>
+      </button>
+    </div>   
+    <div class="signup" style="margin-top: 20px;">
+      <p>Vous êtes un nouveau Membre? <a style="cursor:pointer; color:rgb(38, 0, 255);" (click)="navigateToSignUp()">Rejoignez-nous!</a></p>
+      
+    </div>
+  </div>
+    
+</main>
+

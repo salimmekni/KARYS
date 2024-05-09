@@ -1,0 +1,61 @@
+
+  main {
+    margin: 0;
+    padding: 0;
+    background-image: url('../../../assets/background.jpeg'); /* Chemin vers votre image de fond */
+    background-size: cover; /* Ajuste la taille de l'image pour remplir l'écran */
+    background-position: center; /* Centre l'image */
+    height: 100vh; /* Hauteur de la fenêtre visible */
+    display: flex; /* Utiliser le modèle de boîte flexible */
+    justify-content: center; /* Centrer horizontalement le contenu */
+    align-items: center; /* Centrer verticalement le contenu */
+    color: transparent; /* Couleur du texte */
+    font-family: Arial, sans-serif; /* Police de caractères */
+    text-align: center; /* Centrer le texte */
+    position: relative; /* Position relative pour les éléments positionnés à l'intérieur */
+    overflow: hidden;
+    max-height: 95.1vh;
+
+  }
+  html {
+      max-height: 1vh;
+  }
+  
+  .content {
+    position: absolute; /* Position absolue par rapport à son parent */
+    top: 50%; /* Positionner à 50% du haut de l'écran */
+    left: 50%; /* Positionner à 50% de la gauche de l'écran */
+    transform: translate(-50%, -50%); /* Déplacer de moitié de sa propre taille vers le haut et la gauche pour le centrer */
+    padding: 20px; /* Espacement intérieur */
+    border-radius: 10px; /* Bordures arrondies */
+  }
+
+  .content img {
+    width: 800px; /* Largeur de l'image */
+    height: auto; /* Hauteur automatique pour conserver les proportions */
+  }
+  .free-game-button {
+    background-color: #111; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    position: absolute;
+    margin-top: 450px;
+    position: absolute;
+    top: 80px;
+    min-width: 195px;
+    background-color: rgba(232, 166, 73, 0.974);
+    letter-spacing: 0.16em;
+    box-sizing: border-box;
+    font-family: fangsong;
+    font-size: x-large;
+    border: 2px solid black;
+    align-items: center;
+    font-weight: bold;
+  }

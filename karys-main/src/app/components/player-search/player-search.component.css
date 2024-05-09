@@ -1,0 +1,62 @@
+.registration-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('/assets/bg4.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .registration-card {
+    max-width: 400px;
+    width: 100%;
+    margin: 20px;
+    /*background-color: transparent;*/
+    background-color: rgba(255, 255, 255, 0.1); /* White with light gray transparency */
+    backdrop-filter: blur(10px); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px;
+  }
+  
+  .full-width-input {
+    width: 100%;
+  }
+  
+  .registration-button {
+    margin-top: 20px;
+    padding: 8px 16px;
+    margin-left: auto;
+  }
+  
+  /* This will target the container of the form fields */
+  .registration-form {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+  }
+  
+  /* This will target the individual form field wrappers */
+  .mat-form-field.full-width-input {
+    flex: 1; /* Allow fields to grow and shrink as needed */
+  }
+  
+  /* This creates a flex container only for the first and last name */
+  .name-fields-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  
+  .name-fields-container > .mat-form-field.full-width-input:first-child,
+  .name-fields-container > .mat-form-field.full-width-input:last-child {
+    flex-basis: calc(50% - 10px);
+    margin-right: 20px;
+  }
+  
+  /* Adjust the margin-right for the last field in the container */
+  .name-fields-container > .mat-form-field.full-width-input:last-child {
+    flex-basis: calc(50% - 10px);
+    margin-right: 0; /* No margin on the right for the last field */
+  }
+  
